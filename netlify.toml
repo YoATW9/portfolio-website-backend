@@ -1,0 +1,11 @@
+[build]
+  functions = "functions"
+  command = "npm run build"
+
+[dev]
+  port = 5000
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/api/:splat"
+  status = 200
