@@ -2,7 +2,6 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
-const config = require('./config/config');
 const authRoutes = require('./routes/auth');
 const portfolioRoutes = require('./routes/portfolio');
 
@@ -31,7 +30,7 @@ app.get('/', (req, res) => {
   res.status(200).json({ status: 'Portfolio API is running' });
 });
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
 });

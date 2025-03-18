@@ -1,12 +1,14 @@
 {
   "name": "portfolio-website-server",
   "version": "1.0.0",
-  "main": "api/index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node api/index.js",
-    "dev": "netlify-lambda serve api",
-    "build": "netlify-lambda build api",
+    "start": "node server.js",
+    "dev": "nodemon server.js",
     "init-admin": "node scripts/initAdmin.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -14,11 +16,9 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.0",
-    "mongoose": "^7.0.3",
-    "serverless-http": "^3.1.1"
+    "mongoose": "^7.0.3"
   },
   "devDependencies": {
-    "netlify-lambda": "^2.0.15",
     "nodemon": "^2.0.22"
   }
 }
