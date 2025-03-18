@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: portfolio-website-backend
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://honivas2:sxuKL7LDx5GbeKLN@portfolio.1ntg5.mongodb.net/portfolio?retryWrites=true&w=majority
+      - key: JWT_SECRET
+        value: portfolioSecret2025
+      - key: PORT
+        value: 5000
+      - key: ADMIN_EMAIL
+        value: ylai0988@gmail.com
+      - key: ADMIN_PASSWORD
+        value: Portfolioylai!2025
+      - key: NODE_ENV
+        value: production
